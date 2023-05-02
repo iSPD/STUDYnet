@@ -67,10 +67,52 @@
   
   - 색감변경
 
-<div align="left">
+<div align="center">
 <img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/datasetExample2.PNG"/>
+<b><420개로 가공. 위 사진은 예시></b>
 </div>
-
+  
+### Train
+```
+  CUDA_VISIBLE_DEVICES=0 python train_image_classifier.py
+    --alsologtostderr \
+    --checkpoint_path=english/trainEnglish \
+    --dataset_dir=datasets/english/recordEnglish \
+    --dataset_name=book \
+    --dataset_split_name=train \
+    --model_name=mobilenet_v2_140
+```
+  
+### TFLite 변환
+```
+  python3 export_inference_graph.py \
+  --alsologtostderr \
+  --model_name=mobilenet_v2_140 \
+  --image_size=224 \
+  --output_file=studyNet/result_korean/mobilenet_v2_224_14.pb
+```
+  
+```
+  bazel-bin/tensorflow/python/tools/freeze_graph \
+    --input_graph=/home/khkim/tensorflow/tensorflow-recent/tensorflow/book/trains/train_thumb/mobilenet_v2_224_14.pb \
+    --input_checkpoint=/home/khkim/tensorflow/tensorflow-recent/tensorflow/bookDemo/trains/train_thumb/model.ckpt-50000 \
+    --input_binary=true --output_graph=/home/khkim/tensorflow/tensorflow-recent/tensorflow/bookDemo/trains/train_thumb/book_thumb_big_mobilenet_v2_14.pb \
+    --output_node_names=MobilenetV2/Predictions/Reshape_1
+    --output_node_names=MobilenetV1/Sigmoid
+```  
+  
+```
+  ./bazel-bin/tensorflow/lite/python/tflite_convert \
+  --output_file=bookDemo/trains/train_thumb/book_thumb_big_mobilenet_v2_14.tflite \
+  --graph_def_file=bookDemo/trains/train_thumb/book_thumb_big_mobilenet_v2_14.pb \
+  --input_arrays=input \
+  --output_arrays=MobilenetV2/Predictions/Reshape_1 \
+  --input_shapes=1,224,224,3 \
+  --inference_input_type=FLOAT \
+  --inference_type=FLOAT \
+  --allow_custom_ops
+```  
+  
 ---
 
 ## Handwriting Optical Character Recognition (Korean, English)
@@ -147,7 +189,7 @@
 ## AI Auto Scoring Solution
 
 <div align="center">
-<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/>
+<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
 
 ---
