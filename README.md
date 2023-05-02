@@ -67,12 +67,17 @@
   
   - 색감변경
 
+- tfrecord 변환 예제
+```
+python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset_black
+```
+
 <div align="center">
 <img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/datasetExample2.PNG"/>
 <b><420개로 가공. 위 사진은 예시></b>
 </div>
   
-### Train
+### Train 예제
 ```
   CUDA_VISIBLE_DEVICES=0 python train_image_classifier.py
     --alsologtostderr \
@@ -83,7 +88,7 @@
     --model_name=mobilenet_v2_140
 ```
   
-### TFLite 변환
+### TFLite 변환 예제
 ```
   python3 export_inference_graph.py \
   --alsologtostderr \
