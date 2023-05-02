@@ -44,7 +44,8 @@
     ```
     
 ### 모델 변환
-
+  - Torch Script
+  
     ```
     CUDA_VISIBLE_DEVICES=-1 python3 demo_for_torchscript.py --Transformation None --FeatureExtraction VGG --SequenceModeling None --Prediction CTC --image_folder ./demo_image --PAD --saved_model ./saved_models/handwrite_eng/best_accuracy.pth
     ```
