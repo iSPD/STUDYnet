@@ -43,6 +43,33 @@
 ---
 
 ## Classfication AI Model
+동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이식 인식을 위해 Classification Model에서 Training
+
+### 사용모델
+
+[MobileNet_v2_1.4_224](https://github.com/tensorflow/models/tree/master/research/slim)
+
+### 데이터셋 가공
+- 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 환경변수들을 감안하여 데이터셋 가공. 아래와 같이 가공
+  - Scale(크기)
+  
+  - Bright(밝기)
+  
+  - Contrast(대비)
+  
+  - Rotation(회전)
+  
+  - Blur
+  
+  - 빛반사
+  
+  - 그림자
+  
+  - 색감변경
+
+<div align="left">
+<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/datasetExample2.PNG"/>
+</div>
 
 ---
 
