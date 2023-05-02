@@ -7,12 +7,14 @@
 </div>
 
 ## 스마트폰 솔루션
+- 인공지능 영상/문자 인식기술을 이용, 스마트폰 카메라로 동화책의 캐릭터, 글자를 실시간으로 인식하여 각 페이지에 매칭되는 소리동화, 동영상, AR자료 등을 자동 재생해주는 기술.
 
 <div align="center">
 <img width="70%" src="https://github.com/iSPD/STUDYnet/blob/main/images/mommyBook.png"/>
 </div>
 
 ## 테블릿 솔루션
+- 비대면 AI 학습지 솔루션. 책 위에서 손가락 Motion인식과 (일반)펜 필기인식 기술 적용.
 
 <div align="center">
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook1.png"/><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook2.png"/>
@@ -28,7 +30,7 @@
 
 ## 🕰️ **개발 기간**
 
-- 2019년 6월 21일 ~ 2020년 6월 20일
+- 2020년 12월 31일 ~ 2022년 12월 30일
 
 ---
 
