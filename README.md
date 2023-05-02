@@ -1,9 +1,27 @@
 # STUDYnet
 **비대면 AI 학습지 · 동화책 솔루션**
-- 인공지능 영상 · 문자 인식기술을 이용하여, 태블릿 또는 스마트폰 전 · 후방 카메라로 학습지·동화책의 캐릭터 및 TEXT를 실시간 인식하여 각 페이지에 매칭되는 음원, AR, 동영상 등을 자동 재생해주며, 책 위에서의 손가락 MOTION 인식과 (일반)펜 필기인식 기술로, 교사 방문을 대체하는 비대면 AI · 학습지 · 동화책 솔루션. 기존 OID 망점출판 + 전자펜 대체 = 원가절감 + 보급형 AI·학습
+- 인공지능 영상 · 문자 인식기술을 이용하여, 태블릿 또는 스마트폰 전 · 후방 카메라로 학습지·동화책의 캐릭터 및 TEXT를 실시간 인식하여 각 페이지에 매칭되는 음원, AR, 동영상 등을 자동 재생해주며, 책 위에서의 손가락 MOTION 인식과 (일반)펜 필기인식 기술로, 교사 방문을 대체하는 비대면 AI · 학습지 · 동화책 솔루션.
 
 <div align="center">
-<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/introduce.png"/>
+<img width="70%" src="https://github.com/iSPD/STUDYnet/blob/main/images/introduce2.png"/>
+</div>
+
+## 스마트폰 솔루션
+
+<div align="center">
+<img width="70%" src="https://github.com/iSPD/STUDYnet/blob/main/images/mommyBook.png"/>
+</div>
+
+## 테블릿 솔루션
+
+<div align="center">
+<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook1.png"/><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook2.png"/>
+
+<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook3.png"/><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook4.png"/>
+
+<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook5.png"/><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook6.png"/>
+
+<img width="90%" src="https://github.com/iSPD/STUDYnet/blob/main/images/studyBook7.png"/>
 </div>
 
 ---
