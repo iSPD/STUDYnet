@@ -83,6 +83,12 @@
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/rockPaper.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/earthView.gif"/>
 </div>
 
+- 구글에서 제공하는 AI Framework인 [MediaPipe](https://github.com/google/mediapipe)에서 Hand landmarks detection 사용
+
+- <b>STUDYnet</b>에서는 아래와 같이 손가락 인식 및 학습활동에 사용
+
+- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>STUDYnet</b>에서는 C++코드를 사용하며, <b>OpenGL ES2.0(Shader)</b>과 연결해서 사용
+
 ---
 
 ## AI Auto Scoring Solution
