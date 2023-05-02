@@ -38,7 +38,7 @@
 
 ---
 ## LICENSE
-- [MIT](https://github.com/iSPD/SFnet/blob/main/LICENSE.md)
+- [MIT](https://github.com/iSPD/STUDYnet/blob/main/LICENSE.md)
 
 ---
 ## 문의 사항
