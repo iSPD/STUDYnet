@@ -79,6 +79,10 @@
 
 ## Motion Recognition
 
+<div align="center">
+<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/rockPaper.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/earthView.gif"/>
+</div>
+
 ---
 
 ## AI Auto Scoring Solution
