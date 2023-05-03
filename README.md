@@ -205,9 +205,11 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/hand_landmark.png"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%ED%95%99%EC%8A%B5%ED%99%9C%EB%8F%99.gif"/>
 </div>
 
+<!--
 <div align="center">
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/rockPaper.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/earthView.gif"/>
 </div>
+-->
 
 - 구글에서 제공하는 AI Framework인 [MediaPipe](https://github.com/google/mediapipe)에서 Hand landmarks detection 사용
 
@@ -220,7 +222,7 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ## AI Auto Scoring Solution
 
 <div align="center">
-<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
+<!--<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/>--><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
   
 ---
