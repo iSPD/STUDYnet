@@ -208,7 +208,7 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
   
-## Image Alignement(이미지 정렬) with Pre-Processing
+## Advanced PD Image Alignement(이미지 정렬) with Pre-Processing
 - 카메라 Preview로 들어오는 책 페이지의 Edge를 알아내서 책의 외곽선 및 중앙선을 알아내서, 왜곡된 부분을 보정후 KeyPoint 검출 후 책 원본 KeyPoint와 Feature Matching하여 Alignment.
   
 ### 사용 언어 및 라이브러리
