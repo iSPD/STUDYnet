@@ -50,7 +50,7 @@
 [MobileNet_v2_1.4_224](https://github.com/tensorflow/models/tree/master/research/slim)
 
 ### 데이터셋 가공
-- 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 `환경`들을 감안하여 데이터셋 가공. 아래와 같이 가공
+- 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 **환경**들을 감안하여 데이터셋 가공. 아래와 같이 가공
   - Scale(크기)
   
   - Bright(밝기)
@@ -208,8 +208,10 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
   
-## Advanced PD Image Alignement(이미지 정렬) with Pre-Processing
-- 카메라 Preview로 들어오는 책 페이지의 Edge를 알아내서 책의 외곽선 및 중앙선을 알아내서, 왜곡된 부분을 보정후 KeyPoint 검출 후 책 원본 KeyPoint와 Feature Matching하여 Alignment.
+---
+  
+## Advanced PD Image Alignment(이미지 정렬) with Pre-Processing
+- 카메라 Preview로 들어오는 책 페이지의 Edge를 알아내서 책의 외곽선 및 중앙선을 알아내서, 왜곡된 부분을 보정후 KeyPoint 검출 후 책 원본 KeyPoint와 Feature Matching하여 PD Image Alignment를 적용.
   
 ### 사용 언어 및 라이브러리
   
