@@ -305,6 +305,11 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ---
 ## LICENSE
 - [MIT](https://github.com/iSPD/STUDYnet/blob/main/LICENSE.md)
+  
+---
+  
+## 사용 방법
+- Contact : ispd_daniel@outlook.kr(김경훈), ispd_sally@outlook.kr(정영선)  
 
 ---
 ## 문의 사항
