@@ -89,15 +89,17 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ```
   
 ### TFLite 변환 예제
-```
+- 추론그래프 추출
+```Python
   python3 export_inference_graph.py \
   --alsologtostderr \
   --model_name=mobilenet_v2_140 \
   --image_size=224 \
   --output_file=studyNet/result_korean/mobilenet_v2_224_14.pb
 ```
-  
-```
+
+- 추론그래프(Graph)와 CheckPoint 파일 하나에 저장
+```Python
   bazel-bin/tensorflow/python/tools/freeze_graph \
     --input_graph=/home/khkim/tensorflow/tensorflow-recent/tensorflow/book/trains/train_thumb/mobilenet_v2_224_14.pb \
     --input_checkpoint=/home/khkim/tensorflow/tensorflow-recent/tensorflow/bookDemo/trains/train_thumb/model.ckpt-50000 \
@@ -106,7 +108,8 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
     --output_node_names=MobilenetV1/Sigmoid
 ```  
   
-```
+- Android에서 사용할 수 있게 tflite로 변환
+```Python
   ./bazel-bin/tensorflow/lite/python/tflite_convert \
   --output_file=bookDemo/trains/train_thumb/book_thumb_big_mobilenet_v2_14.tflite \
   --graph_def_file=bookDemo/trains/train_thumb/book_thumb_big_mobilenet_v2_14.pb \
