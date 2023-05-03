@@ -1,6 +1,6 @@
 ## Handwriting Optical Character Recognition (Korean, English)
 
-- deep-text-recognition-benchmark 참고하여 한국어, 영어 필기 글자체 인식 모델 생성
+- deep-text-recognition-benchmark(clovaai) 참고하여 한국어, 영어 필기 글자체 인식 모델 생성
 
 - 안드로이드 모바일용으로 모델 변환
 
