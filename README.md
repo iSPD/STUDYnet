@@ -208,7 +208,8 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
   
-## 동화책 페이지 Alignemnet
+## Image Alignement(이미지 정렬) with Pre-Processing
+- 카메라 Preview로 들어오는 책 페이지의 Edge를 알아내서 책의 외곽선 및 중앙선을 알아내서, 왜곡된 부분을 보정후 KeyPoint 검출 후 책 원본 KeyPoint와 Feature Matching하여 Alignment.
   
 ### 사용 언어 및 라이브러리
   
@@ -220,13 +221,67 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 |:---:|:---:|
 |<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/1.edgeDetect.jpg"/>|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/2.detectEdge.jpg"/>|
 
-|Edge Detection with Sobel, Canny|Line Detection with Hough Transform|
+|Geometric Perspective(기하학적 변환)|KeyPoint Detection & <b>Advanced PD Image Alignment</b>|
 |:---:|:---:|
 |<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/3.span.jpg"/>|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/4.keypointDetect.jpg"/>|
   
-|Edge Detection with Sobel, Canny|
+|책 원본과 카메라로 들어오는 책 Preview가 겹쳐진 상태|
 |:---:|
-|<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/5.final.jpg"/>|
+|<img width="50%" src="https://github.com/iSPD/STUDYnet/blob/main/images/5.final.jpg"/>|
+  
+#### Edge Detection with Sobel, Canny 예제
+  
+  ```C++
+  //특성이 다른 두 Edge Detection 사용
+  Sobel(HRoiMat, HRoiMat, -1, 0, 1);
+  Canny(HRoiMat, HRoiMat, cannyThreshold1, cannyThreshold2, 5, true);
+
+  //선 두껍게
+  Mat dilateSize = getStructuringElement(MORPH_CROSS, Size(1, dilateKSize), Point(-1, -1));
+  dilate(HRoiMat, HRoiMat, dilateSize, Point(-1, -1), dilateIteration);
+  ```
+  
+#### Line Detection with Hough Transform 예제
+  
+  ```C++
+  HoughLinesP(HRoiMat, hLines, 0.5, CV_PI / 180, 50, hMinLength, hMaxLineGap);
+  ```
+  
+#### Geometric Perspective(기하학적 변환) 예제
+  
+  ```C++
+  oriPoint[0] = Point2f(gMeetLeftX*resize, gMeetLeftY*resize);//-gUpCut
+  oriPoint[1] = Point2f(gMeetRightX*resize, gMeetRightY*resize);//-gUpCut
+  oriPoint[2] = Point2f(gPredictLeftX*resize, gPredictLeftY*resize);
+  oriPoint[3] = Point2f(gPredictRightX*resize, gPredictRightY*resize);
+
+  int leftHeight = height - belowCropValue;
+  int rightHeight = height - belowCropValue;
+
+  tarPoint[0] = Point2f(0, 0);
+  tarPoint[1] = Point2f(width, 0);
+  tarPoint[2] = Point2f(0, leftHeight);
+  tarPoint[3] = Point2f(width, rightHeight);
+
+  trans = getPerspectiveTransform(oriPoint, tarPoint);
+  warpPerspective(resultMat, resultMat, trans, resultMat.size());
+  ```
+  
+#### KeyPoint Detection & Image Alignment 예제
+  
+  ```C++
+  std::vector<KeyPoint> keypoints1;
+  Mat descriptors1;
+  
+  Ptr<SURF> surf = SURF::create(100.0);
+  surf->detectAndCompute(compareGrayMat, Mat(), keypoints1, descriptors1);
+  
+  ...
+  
+  //PD Alignment
+  Mat resultMat = doPDAlignment(leftInputMat, rightInputMat, leftBookFileMat, rightBookFileMat, true/*For Debug*/);
+  return resultMat;
+  ```
   
 ---
 ## LICENSE
