@@ -90,7 +90,7 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ```
   
 ### Train 예제
-```
+```Python
   CUDA_VISIBLE_DEVICES=0 python train_image_classifier.py
     --alsologtostderr \
     --checkpoint_path=english/trainEnglish \
@@ -168,22 +168,22 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ### Train
 
   - LMDB 변환
-    ```
+    ```Python
     python3 create_lmdb_dataset.py --inputPath ../dataset/handwrite_eng/ --gtFile ../dataset/handwrite_eng/annotation_train.txt --outputPath ../dataset/handwrite_eng/lmdb_train
     ```
   - Train
-    ```
+    ```Python
     CUDA_VISIBLE_DEVICES=0 python3 train.py --experiment_name handwrite_eng --train_data ../dataset/lmdb_hw_eng/lmdb_train --valid_data ../dataset/lmdb_hw_eng/lmdb_val --select_data / --batch_ratio 1 --Transformation None --FeatureExtraction VGG --SequenceModeling None --Prediction CTC --valInterval 500 --manualSeed 2223 --PAD --num_iter 300000 --output_channel 512 --hidden_size 256
     ```
   - Test
-    ```
+    ```Python
     CUDA_VISIBLE_DEVICES=0 python3 test.py --eval_data ../dataset/lmdb_hw_eng/lmdb_test --Transformation None --FeatureExtraction VGG --SequenceModeling None --Prediction CTC --saved_model ./saved_models/handwrite_eng/best_accuracy.pth --PAD --output_channel 512 --hidden_size 256
     ```
     
 ### 모델 변환
   - [TorchScript](https://pytorch.org/docs/stable/jit.html#torchscript)
   
-    ```
+    ```Python
     CUDA_VISIBLE_DEVICES=-1 python3 demo_for_torchscript.py --Transformation None --FeatureExtraction VGG --SequenceModeling None --Prediction CTC --image_folder ./demo_image --PAD --saved_model ./saved_models/handwrite_eng/best_accuracy.pth
     ```
 
