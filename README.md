@@ -226,6 +226,9 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 ---
 
 ## AI Auto Scoring Solution
+- OCR과 Image Classification을 이용하여 정답 채점
+  - OCR : **모델3개**로 손글씨를 Inference하여 인식률 개선. (모델1, 모델2, 모델3 모두 동일하게 인식하면 인식률 100%. 모델1, 모델2가 동일하게 인식하면 인식률 66%)
+  - Image Classification : 학습지에 스티커와 같은 이미지를 붙이는 경우 인식하여서 자동 채점
 
 <div align="center">
 <!--<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/>--><img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
