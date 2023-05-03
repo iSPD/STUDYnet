@@ -43,14 +43,14 @@
 ---
 
 ## Classfication AI Model
-동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이식 인식을 위해 Classification Model에서 Training
+동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이지 및 활동 스티커 인식을 위해 Classification Model에서 Training
 
 ### 사용모델
 
 [MobileNet_v2_1.4_224](https://github.com/tensorflow/models/tree/master/research/slim)
 
 ### 데이터셋 가공
-- 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 환경변수들을 감안하여 데이터셋 가공. 아래와 같이 가공
+- 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 `환경`들을 감안하여 데이터셋 가공. 아래와 같이 가공
   - Scale(크기)
   
   - Bright(밝기)
@@ -67,12 +67,20 @@
   
   - 색감변경
 
+  - *기타가공*
+
 <div align="center">
 <img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/datasetExample2.PNG"/>
-<b><420개로 가공. 위 사진은 예시></b>
+<b><페이지 당 420개로 가공. 위 사진은 예시></b>
 </div>
   
-- tfrecord 변환 예제
+### 사용 언어 및 라이브러리
+  
+  - Python 3.x.x
+  
+  - tensorflow
+
+### tfrecord 변환 예제(Tensorflow 데이터셋 형식)
 ```
 python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset_black
 ```
@@ -199,7 +207,27 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 <div align="center">
 <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90.gif"/> <img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/%EC%9E%90%EB%8F%99%EC%B1%84%EC%A0%90%EB%85%B9%ED%99%94.gif"/>
 </div>
+  
+## 동화책 페이지 Alignemnet
+  
+### 사용 언어 및 라이브러리
+  
+  - C++
+  
+  - OpenCV 3.4.x
 
+|Edge Detection with Sobel, Canny|Line Detection with Hough Transform|
+|:---:|:---:|
+|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/1.edgeDetect.jpg"/>|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/2.detectEdge.jpg"/>|
+
+|Edge Detection with Sobel, Canny|Line Detection with Hough Transform|
+|:---:|:---:|
+|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/3.span.jpg"/>|<img width="100%" src="https://github.com/iSPD/STUDYnet/blob/main/images/4.keypointDetect.jpg"/>|
+  
+|Edge Detection with Sobel, Canny|
+|:---:|
+|<img width="45%" src="https://github.com/iSPD/STUDYnet/blob/main/images/5.final.jpg"/>|
+  
 ---
 ## LICENSE
 - [MIT](https://github.com/iSPD/STUDYnet/blob/main/LICENSE.md)
