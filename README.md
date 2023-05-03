@@ -198,6 +198,8 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
   <br>
   <img src="https://github.com/iSPD/STUDYnet/blob/main/images/data/eng/66185_227_ft3.jpg"/>  <img src="https://github.com/iSPD/STUDYnet/blob/main/images/data/eng/741531_56481_ft33.jpg"/>  <img src="https://github.com/iSPD/STUDYnet/blob/main/images/data/eng/741532_56485_ft33.jpg"/>  <img src="https://github.com/iSPD/STUDYnet/blob/main/images/data/eng/88273_408_ft4.jpg"/>  <img src="https://github.com/iSPD/STUDYnet/blob/main/images/data/eng/88312_564_ft4.jpg"/>
   </div>
+  
+---
 
 ## Motion Recognition
 
