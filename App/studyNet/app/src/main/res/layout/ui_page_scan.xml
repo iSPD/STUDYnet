@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/scanview"
+        android:layout_width="1600px"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:alpha="1.0"
+                android:src="@drawable/aiscan_v3" />
+
+            <ImageView
+                android:id="@+id/imgview_scanbar1"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:alpha="1.0"
+                android:src="@drawable/aiscanbar" />
+
+            <ImageView
+                android:id="@+id/imgview_scanbar2"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:alpha="1.0"
+                android:src="@drawable/aiscanbar" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

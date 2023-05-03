@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id = "@+id/activity_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/background_dark">
+
+    <include layout="@layout/ui_teacher_student"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/camera_surface_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_communication"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_communicate_number"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="105dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/longframe"
+            android:ems="5"
+            android:hint="500"
+            android:inputType="number"
+            android:text="ispd0305"
+            android:textColor="@android:color/background_dark"
+            android:gravity="center"
+            android:visibility="visible"
+            android:backgroundTint="@color/colorAccent"/>
+
+        <ImageButton
+            android:id="@+id/btn_communicate_call"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="50dp"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:maxHeight="38dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_call" />
+
+        <Button
+            android:id="@+id/btn_curve_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="250dp"
+            android:text="CurveFixOn-1" />
+
+        <Button
+            android:id="@+id/btn_compare_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="200dp"
+            android:text="CompareChange" />
+
+        <Button
+            android:id="@+id/btn_compare_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="150dp"
+            android:text="CompareLow" />
+
+        <Button
+            android:id="@+id/btn_compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="100dp"
+            android:text="Compare" />
+
+        <include layout="@layout/ui_page_scan"/>
+        <include layout="@layout/ui_cover_guide"/>
+        <include layout="@layout/ui_inner_guide"/>
+        <include layout="@layout/ui_multi_model_scoring"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/ui_score"/>
+<!--    <include layout="@layout/motion_handtracking"/>-->
+
+    <include layout="@layout/aiscore_sticker"/>
+    <include layout="@layout/activities_touch"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

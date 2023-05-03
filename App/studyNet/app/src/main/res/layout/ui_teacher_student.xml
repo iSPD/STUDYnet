@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_teacher_student"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:layout_width="400px"
+        android:layout_height="match_parent"
+        android:layout_marginTop="800px"
+        android:layout_marginLeft="1600px"
+        android:background="@drawable/background"
+        android:scaleType="fitXY">
+    </FrameLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_view_teacher"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:src="@drawable/teacher_gif"
+        android:visibility="visible" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_view_student"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_below="@id/gif_view_teacher"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/student220x220"
+        android:visibility="visible" />
+
+</RelativeLayout>

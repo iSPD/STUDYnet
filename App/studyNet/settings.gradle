@@ -1,0 +1,4 @@
+include ':opencv'
+include ':app'
+project(':opencv').projectDir = new File(rootDir, 'app/opencv/')
+rootProject.name = "studyNet"

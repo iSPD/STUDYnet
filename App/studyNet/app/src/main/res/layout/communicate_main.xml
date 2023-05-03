@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- tools:ignore is needed because lint thinks this can be replaced with a merge. Replacing this
+     with a merge causes the fullscreen SurfaceView not to be centered. -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/communicate_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MergeRootFrame">
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <org.appspot.apprtc.CustomDrawView-->
+    <!--            android:id="@+id/mainView"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"/>-->
+
+    <!--    </FrameLayout>-->
+
+    <!--    <org.webrtc.SurfaceViewRenderer-->
+    <!--        android:id="@+id/fullscreen_video_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center" />-->
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/pip_video_view"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_gravity="top|end" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ispd.mommybook.communicate.CommunicateView
+            android:id="@+id/cv_communicate"
+            android:layout_width="1600px"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/call_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:id="@+id/hud_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_communication_info"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="800px"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:background="@android:color/background_dark"
+        android:text="Connected to"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp" />
+
+</FrameLayout>

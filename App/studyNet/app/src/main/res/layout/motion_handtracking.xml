@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/motion_handtracking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ispd.mommybook.motion.MotionHandTrackingView
+        android:id="@+id/cv_motion_handtracking"
+        android:layout_width="1600px"
+        android:layout_height="match_parent"
+        android:background="#00FF00FF" />
+</FrameLayout>

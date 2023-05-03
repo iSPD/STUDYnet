@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_aiscoreview_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main">
+
+    <com.ispd.mommybook.aiscore.AIScoreView
+        android:id="@+id/cv_aiscore_view"
+        android:layout_width="1600px"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#00000000">
+        <ImageButton
+            android:id="@+id/btn_display_aiscore"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="38dp"
+            android:background="#00000000"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/btn_dpscore"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/btn_do_aiscore"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="38dp"
+            android:background="#00000000"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="105dp"
+            android:src="@drawable/btn_doscore"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_aiscoreview"
+        android:layout_width="1600px"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageDebugView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/math72" />
+    </LinearLayout>
+
+</FrameLayout>

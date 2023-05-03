@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_uiview_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main">
+
+    <com.ispd.mommybook.ui.UIView
+        android:id="@+id/cv_uiview"
+        android:layout_width="1600px"
+        android:layout_height="match_parent"
+        android:background="#00FF00FF" />
+
+    <FrameLayout
+        android:id="@+id/fl_uiview"
+        android:layout_width="1600px"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_scoring_toast"
+        android:visibility="invisible"
+        android:gravity="center|bottom"
+        >
+        <TextView
+            android:id="@+id/tv_scoring_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/toast_design_bg" />
+    </LinearLayout>
+</FrameLayout>

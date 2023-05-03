@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:layout_width="1600px"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        >
+
+                <!--모델별 인식 결과-->
+                <LinearLayout
+                    android:id="@+id/llview_recog_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="135px"
+                    android:background="#fff3faa9"
+                    android:orientation="vertical"
+                    android:layout_marginTop="600px"
+                    android:layout_marginLeft="800px"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/txtview_model_1"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="left"
+                        android:adjustViewBounds="true"
+                        android:text="모델1:다람쥐"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txtview_model_2"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="left"
+                        android:adjustViewBounds="true"
+                        android:text="모델2:다랑쥐"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txtview_model_3"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="left"
+                        android:adjustViewBounds="true"
+                        android:text="모델3:다랑쥐"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <!--점수-->
+                <LinearLayout
+                    android:id="@+id/llview_score_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="135px"
+                    android:background="#fff3faa9"
+                    android:orientation="vertical"
+                    android:layout_marginTop="600px"
+                    android:layout_marginLeft="1000px"
+                    android:visibility="invisible">
+<!--점수 1-->
+                    <TextView
+                        android:id="@+id/txtview_score_1"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="right"
+                        android:adjustViewBounds="true"
+                        android:text="100점"
+                        android:visibility="invisible" />
+<!--점수 2-->
+                    <TextView
+                        android:id="@+id/txtview_score_2"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="right"
+                        android:adjustViewBounds="true"
+                        android:text="66점"
+                        android:visibility="invisible" />
+<!--점수 3-->
+                    <TextView
+                        android:id="@+id/txtview_score_3"
+                        android:textAppearance="@style/ScoreText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45px"
+                        android:layout_gravity="right"
+                        android:adjustViewBounds="true"
+                        android:text="66점"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+            <!--            글씨 보정 메세지-->
+            <LinearLayout
+                android:layout_width="1000px"
+                android:layout_height="400px"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginTop="820px">
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFEB3B"
+                    android:shadowColor="#F6F4F4"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="6.0"
+                    android:text=" 글씨를 정확하게 써야 할 것 같아요. \n 다시 써볼까요? "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--                표지 가이드 배경-->
+        <ImageView
+            android:id="@+id/imgview_cover_guide_bg"
+            android:layout_width="1100px"
+            android:layout_height="900px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="250px"
+            android:alpha="0.9"
+            android:scaleType="fitXY"
+            android:src="@drawable/coverguidebg"
+            android:visibility="invisible" />
+        <!--                표지 가이드 손-->
+        <ImageView
+            android:id="@+id/imgview_coverguide"
+            android:layout_width="1600px"
+            android:layout_height="734px"
+            android:layout_marginTop="560px"
+            android:adjustViewBounds="true"
+            android:alpha="0.9"
+            android:src="@drawable/coverguide"
+            android:visibility="invisible" />
+        <!--                표지가이드 텍스트 말풍선-->
+        <ImageView
+            android:id="@+id/imgview_coverguide_balloon"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:adjustViewBounds="true"
+            android:alpha="0.9"
+            android:src="@drawable/balloontext_1"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

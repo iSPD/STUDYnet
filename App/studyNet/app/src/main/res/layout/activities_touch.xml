@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_activities_touch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main">
+<!--    android:background="@android:color/background_dark">-->
+
+    <VideoView
+        android:id="@+id/vv_playview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/ibtn_touch"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_marginLeft="165px"
+        android:layout_marginTop="725px"
+        android:layout_weight="1"
+        android:alpha="1.0"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/touchbutton"
+        android:visibility="gone"/>
+
+</FrameLayout>
