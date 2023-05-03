@@ -45,6 +45,10 @@
 ## Classfication AI Model
 동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이지 및 활동 스티커 인식을 위해 Classification Model에서 Training
 
+<div align="left">
+<img width="30%" src="https://github.com/iSPD/STUDYnet/blob/main/images/mommyTale.gif"/>
+</div>
+
 ### 사용모델
 
 [MobileNet_v2_1.4_224](https://github.com/tensorflow/models/tree/master/research/slim)
