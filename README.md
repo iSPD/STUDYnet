@@ -256,8 +256,10 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 |책 원본과 카메라로 들어오는 책 Preview가 겹쳐진 상태|
 |:---:|
 |<img width="50%" src="https://github.com/iSPD/STUDYnet/blob/main/images/5.final.jpg"/>|
-  
+    
 #### Edge Detection with Sobel, Canny 예제
+
+  - [imageEdgeDetect.cpp](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/jni/imageEdgeDetect.cpp)
   
   ```C++
   //특성이 다른 두 Edge Detection 사용
@@ -270,12 +272,16 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
   ```
   
 #### Line Detection with Hough Transform 예제
+
+  - [imageEdgeDetect.cpp](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/jni/imageEdgeDetect.cpp)
   
   ```C++
   HoughLinesP(HRoiMat, hLines, 0.5, CV_PI / 180, 50, hMinLength, hMaxLineGap);
   ```
   
 #### Geometric Perspective(기하학적 변환) 예제
+
+  - [imageEdgeDetect.cpp](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/jni/imageEdgeDetect.cpp)
   
   ```C++
   oriPoint[0] = Point2f(gMeetLeftX*resize, gMeetLeftY*resize);//-gUpCut
@@ -296,6 +302,8 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
   ```
   
 #### KeyPoint Detection & Image Alignment 예제
+
+  - [imagePDAlignment.cpp](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/jni/imagePDAlignment.cpp)
   
   ```C++
   std::vector<KeyPoint> keypoints1;
