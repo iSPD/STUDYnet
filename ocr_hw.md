@@ -1,4 +1,5 @@
 ## Text Detection
+
 - Tensorflow 기반, EAST-PVANET 을 참고하여 한국어, 영어 책표지 단어 Dectection 모델 생성
 
 - 안드로이드 모바일용으로 모델 변환
