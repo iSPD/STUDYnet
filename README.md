@@ -45,7 +45,7 @@
 ## Classfication AI Model
 동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이지 및 활동 스티커 인식을 위해 Classification Model에서 Training
 
-<div align="left">
+<div align="center">
 <img width="30%" src="https://github.com/iSPD/STUDYnet/blob/main/images/mommyTale.gif"/>
 </div>
 
@@ -137,7 +137,7 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 
 ## Text Detection
 
-- Tensorflow 기반, EAST-PVANET 을 참고하여 한국어, 영어 책표지 단어 Dectection 모델 생성
+- Tensorflow 기반, EAST-PVANET 을 참고하여 한국어, 영어 책표지 단어 Detection 모델 생성
 
 - 안드로이드 모바일용으로 모델 변환
 
@@ -147,7 +147,9 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 
   - 인조 데이터 생성 
     
-    * 다양한 배경, 165개 글씨체, 글자색상, 글자 굵기, 음영, 테두리, 기울기, Curved, Vertical을 적용한 20만개 데이터 생성 
+    * 다양한 배경에 165개 글씨체, 글자색상, 글자 굵기, 음영, 테두리, 기울기, Curved, Vertical을 적용한 단어를 합성.
+    
+    * 단어영역의 BBOX 데이터를 생성하여, 총 20만개 데이터셋 생성 
     
   - 한국어+영어 책표지 실제 데이터 약 12만개
 
@@ -181,7 +183,7 @@ $ python multigpu_train.py \
   ``` Python
   $ tflite_convert \
   --output_file=frozen_east_pvanet3_model.tflite \
-  --graph_def_file=frozen_east_pvanet_sun_model.pb \
+  --graph_def_file=frozen_east_pvanet_model.pb \
   --input_arrays=input_images \
   --output_arrays='feature_fusion/Conv_7/Sigmoid','feature_fusion/concat_3' \
   --input_shapes=1,320,320,3 \
