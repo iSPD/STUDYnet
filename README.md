@@ -223,6 +223,40 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
 
 - MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>STUDYnet</b>에서는 C++코드를 사용하며, <b>OpenGL ES2.0(Shader)</b>과 연결해서 사용
 
+### 코드예제
+[MotionHandTrackingImpl.java](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/java/com/ispd/mommybook/motion/MotionHandTrackingImpl.java)
+
+```Java
+public MotionHandTrackingImpl(Context context, int surfaceID, EGLContext eglcontext,
+                                  PacketCallback handLandMarkPacketCallback,
+                                  PacketCallback handPacketCallback)
+    {
+        mContext = context;
+        previewDisplayView = new SurfaceView(mContext);
+        //setupPreviewDisplayView();
+
+        // Initialize asset manager so that MediaPipe native libraries can access the app assets, e.g.,
+        // binary graphs.
+        AndroidAssetUtil.initializeNativeAssetManager(mContext);
+        eglManager = new EglManager(eglcontext);
+
+        processor =
+                new FrameProcessor(
+                        mContext,
+                        eglManager.getNativeContext(),
+                        BINARY_GRAPH_NAME,
+                        INPUT_VIDEO_STREAM_NAME,
+                        OUTPUT_VIDEO_STREAM_NAME);
+        processor
+                .getVideoSurfaceOutput()
+                .setFlipY(FLIP_FRAMES_VERTICALLY);
+
+        processor.getVideoSurfaceOutput().setSurface(null);
+        
+        ...
+
+```
+
 ---
 
 ## AI Auto Scoring Solution
