@@ -45,6 +45,14 @@
 ## Classfication AI Model
 동화책 및 학습지의 각 페이지를 가공하여, 여러개의 데이터셋으로 만든 후 스마트폰 및 테블릿 전,후방 카메라에서 페이지 및 활동 스티커 인식을 위해 Classification Model에서 Training
 
+- Quantization, Multi Threading 적용하여 모바일 환경에서 속도 개선( Inference Time 89.4ms↓, 기존 대비 50ms 향상 )
+
+- 데이터 가공 후 Accuracy 93.26%( 가공 전 대비 12%향상 )
+
+- Keras Early Stopping 적용하여 Training 단축
+
+- Android에서 Model Inference 시 Input 이미지 Resizing With Bicubic Interpolation 하여 인식률 개선
+
 <div align="center">
 <img width="30%" src="https://github.com/iSPD/STUDYnet/blob/main/images/mommyTale.gif"/>
 </div>
@@ -52,6 +60,10 @@
 ### 사용모델
 
 [MobileNet_v2_1.4_224](https://github.com/tensorflow/models/tree/master/research/slim)
+
+### 데이터셋
+
+동화책, 학습지 20만 page
 
 ### 데이터셋 가공
 - 휴대폰 및 테블릿 카메라로 동화책 및 학습지를 인식 시 일어날수 있는 **환경**들을 감안하여 데이터셋 가공. 아래와 같이 가공
@@ -132,7 +144,7 @@ python download_and_convert_data_custom.py --dataset_dir=dataBook2/KOR_R/dataset
   --inference_type=FLOAT \
   --allow_custom_ops
 ```  
-  
+
 ---
 
 ## Text Detection
