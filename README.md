@@ -287,7 +287,13 @@ $ python multigpu_train.py \
 
 - <b>STUDYnet</b>에서는 위와 같이 손가락 인식 및 Tracking 하여 학습지 터치 활동, 가위바위보 게임 같은 Activity에 적용.
 
-- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>STUDYnet</b>에서는 C++ 버전을 <b>OpenGL ES2.0(Shader)</b>과 연동함.
+- MediaPipe에서는 다양한 비전 AI기능을 파이프라인 형태로 손쉽게 사용할 수 있도록 프레임워크를 제공. 인체를 대상으로 하는 Detect(인식)에 대해서 얼굴인식, 포즈, 객체감지, 모션트레킹 등 다양한 형태의 기능과 모델을 제공함. python등 다양한 언어을 지원하며, <b>SFNet<sup>TM</sup></b>에서는 Java 코드 수정 후 AAR(Android Archive package)로 Build하여 Android App에 포팅하여 사용
+
+    - Fragment Shader code of MediaPipe의 Texture Transfer API 구현
+    
+    - Fragment Shader code of MediaPipe의 Draw Control API 구현( Camera Preview Texture 자원 공유로 인한 병목현상 방지 )
+
+    - Minimum Threshold Value of MediaPipe Pose Landmark Detection 최적화
 
 ### 코드예제
 [MotionHandTrackingImpl.java](https://github.com/iSPD/STUDYnet/blob/main/App/studyNet/app/src/main/java/com/ispd/mommybook/motion/MotionHandTrackingImpl.java)
